@@ -118,11 +118,22 @@ From the Dimensions menu, select a mobile device preset (e.g., iPhone 12 Pro, Pi
 
 ## Marking Criteria
 
-Your objective is to reimplement as many features from the existing [Union Shop website](https://shop.upsu.net) as you can in your forked repository using Flutter. The table below is an almost comprehensive list of features present on the website, sorted by difficulty level. Each feature has a corresponding percentage value indicating its weight and a reference link to the relevant page on the actual website.
+This assessment is worth 55% of the marks for the Flutter Course (the remaining 45% comes from the weekly sign-offs). The mark for the assessment is divided into two components:
+
+- **[Application (30%)](#application)**: Demonstrated through a live demo during practical sessions
+- **[Software Development Practices (25%)](#software-development-practices)**: Assessed through your repository
+
+For more information about the overall course assessment structure, visit the [Flutter Course homepage](https://manighahrmani.github.io/sandwich_shop/).
+
+### Application
+
+30% of the coursework mark comes from functionality demonstrated through a live demo during practical sessions. More information about the demo sessions is provided in the [demonstration section](#demonstration).
+
+Your objective is to reimplement as many features from the existing [Union Shop website](https://shop.upsu.net) as you can in your forked repository using Flutter.
+
+The table below is an almost comprehensive list of features present on the website, sorted by difficulty. Each feature has a corresponding percentage value indicating its weight in the 30% application mark and a reference link to the relevant page on the actual website.
 
 ⚠️ Note that this assessment focuses on functionality over visual design (do not spend a lot of time making it look exactly like the real website).
-
-### Requirements
 
 | Feature | Description | Marks (%) | Reference |
 |---------|-------------|-----------|-----------|
@@ -148,7 +159,7 @@ Your objective is to reimplement as many features from the existing [Union Shop 
 | Cart Management | Full cart functionality including quantity editing/removal, price calculations and persistence | 6% | [Cart](https://shop.upsu.net/cart) |
 | Search System | Complete search functionality (search buttons should function on the navbar and the footer) | 4% | [Search](https://shop.upsu.net/search) |
 
-### Terminology
+Below are explanations for some of the terminology used in the table:
 
 ***Hardcoded data** refers to data that is written directly into your Flutter code. These are fixed values rather than data loaded from external sources like APIs, databases, or other services.
 
@@ -156,9 +167,38 @@ Your objective is to reimplement as many features from the existing [Union Shop 
 
 ***Responsiveness** refers to the ability of your application to adapt its layout and design based on the screen size and orientation of the device it is being viewed on. Your app should primarily focus on mobile view but to achieve full marks in this section, it should also function correctly on wider screens (desktop view).
 
+### Software Development Practices
+
+In addition to functionality, you will be assessed on your software development practices demonstrated throughout the project (worth 25% of the coursework mark). These marks are awarded after the demo based on evidence in your repository.
+
+The table below outlines the aspects that will be evaluated and the mark (from the 25%) allocated to each:
+
+| Aspect | Description | Marks (%) |
+|--------|-------------|-----------|
+| Git | Regular, small, meaningful commits to your repository throughout development; clear commit messages | 8% |
+| README | A comprehensive, well-formatted and accurate README file* | 5% |
+| Testing | Tests covering all or almost all of the application; passing tests; evidence of TDD* | 6% |
+| External Services* | Integration and utilization of cloud services | 6% |
+
+Below are some explanation for the terminology used in the table:
+
+***README**: Refer to [worksheet 4](https://manighahrmani.github.io/sandwich_shop/worksheet-4.html#writing-a-readme) for guidance on writing a good README file.
+
+***TDD** stands for Test-Driven Development. It is a software development approach where tests are written before the actual code implementation. To get the mark for TDD, you need have written tests before implementing the corresponding features. Ensure that your commit history reflects this practice.
+
+***External Services** refer to third-party cloud services like Firebase or Azure that your application integrates with. This could include services like user authentication, database, or hosting the application live on web. To achieve full marks, you must demonstrate the integration of at least two separate external services. You are only awarded marks if your README documents this integration and explains how it is used in your application (e.g.., provide a live link to the website if you have hosted it).
+
+## Demonstration
+
+The demos take place during your usual timetabled practical sessions in weeks 19 or 20 (Friday 12/12/2025 or Friday 19/12/2025). More information about the demo sessions will be provided closer to the time.
+
+During the demo, you will have **up to 10 minutes** to demonstrate your application to a member of staff. You must clone your repository in the session and run the application live. You need to be prepared to show the features you have implemented and answer any questions about your code.
+
+⚠️ Make sure your application runs correctly (on your personal device or the university computers) from a fresh clone before attending the demo session.
+
 ## Submission
 
-You need to submit the link to your forked repository on Moodle before the deadline. Open the Moodle page for Programming Applications and Programming Languages (M30235) or User Experience Design and Implementation (M32605) and find the submission section titled "Item 1 - Set exercise (coursework) (CW)". See below:
+You need to submit the link to your forked repository on Moodle **before the deadline**. Open the Moodle page for Programming Applications and Programming Languages (M30235) or User Experience Design and Implementation (M32605) and find the submission section titled "Item 1 - Set exercise (coursework) (CW)". See below:
 
 ![Moodle Submission Page](https://raw.githubusercontent.com/manighahrmani/sandwich_shop/refs/heads/main/images/screenshot_moodle_submission_section.png)
 
