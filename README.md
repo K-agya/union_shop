@@ -114,24 +114,9 @@ Once the app is running in Chrome, open Chrome DevTools by right-clicking on the
 
 ![Chrome DevTools Mobile View](https://raw.githubusercontent.com/manighahrmani/sandwich_shop/refs/heads/main/images/screenshot_chrome_devtools.png)
 
-From the Dimensions menu, select a mobile device preset (e.g., iPhone 12 Pro, Pixel 5) or set custom dimensions
+From the Dimensions menu, select a mobile device preset (e.g., iPhone 12 Pro, Pixel 5):
 
 ![Device Selection](https://raw.githubusercontent.com/manighahrmani/sandwich_shop/refs/heads/main/images/screenshot_chrome_devtools_device_selection.png)
-
-### Running Tests
-
-To run the widget tests:
-
-```bash
-flutter test
-```
-
-To run tests for a specific file:
-
-```bash
-flutter test test/home_test.dart
-flutter test test/product_test.dart
-```
 
 ### Assessment Criteria
 
