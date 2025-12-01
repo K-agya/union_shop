@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:union_shop/views/product_page.dart';
 import 'package:union_shop/views/about_us_page.dart';
 import 'package:union_shop/widgets/header_widget.dart';
+import 'package:union_shop/widgets/footer_widget.dart';
 
 void main() {
   runApp(const UnionShopApp());
