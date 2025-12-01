@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/product_page.dart';
+import 'package:union_shop/about_us_page.dart'; 
 
 void main() {
   runApp(const UnionShopApp());
@@ -98,6 +99,22 @@ class HomeScreen extends StatelessWidget {
                               },
                             ),
                           ),
+                        // About us button
+                          const SizedBox(width: 16),
+                          TextButton(
+                            onPressed: () {
+                              navigateToAbout(context);
+                            },
+                            child: const Text(
+                              'About Us',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 103, 103, 103),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+
                           const Spacer(),
                           ConstrainedBox(
                             constraints: const BoxConstraints(maxWidth: 600),
