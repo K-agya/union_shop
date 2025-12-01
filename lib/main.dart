@@ -258,28 +258,28 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 48,
                       children: const [
                         ProductCard(
-                          title: 'Placeholder Product 1',
+                          title: 'UOP Mug',
                           price: '£10.00',
                           imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/images/Mug.png',
                         ),
                         ProductCard(
-                          title: 'Placeholder Product 2',
+                          title: 'UOP Bottle',
                           price: '£15.00',
                           imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/images/Bottle.png',
                         ),
                         ProductCard(
-                          title: 'Placeholder Product 3',
+                          title: 'UOP Hoodie',
                           price: '£20.00',
                           imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/images/Hoodie.png',
                         ),
                         ProductCard(
-                          title: 'Placeholder Product 4',
+                          title: 'UOP Tote Bag',
                           price: '£25.00',
                           imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/images/Tote.png',
                         ),
                       ],
                     ),
@@ -331,7 +331,7 @@ class ProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Image.network(
+            child: Image.asset(
               imageUrl,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
