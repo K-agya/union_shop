@@ -75,42 +75,11 @@ class AboutUsPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.left,
                   ),
-                  SizedBox(height: 24),
-                  Text(
-                    'Contact Us',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Email: shop@upsu.net\nPhone: 01234 567890\nLocation: University of Portsmouth Campus',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey,
-                      height: 1.5,
-                    ),
-                  ),
                 ],
               ),
             ),
-
             // Footer
-            Container(
-              width: double.infinity,
-              color: Colors.grey[50],
-              padding: const EdgeInsets.all(24),
-              child: const Text(
-                'Union Shop © 2025',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
+            const FooterWidget(),
           ],
         ),
       ),
