@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/widgets/header_widget.dart';
 
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({super.key});
@@ -19,15 +20,9 @@ class AboutUsPage extends StatelessWidget {
               color: Colors.white,
               child: Column(
                 children: [
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    color: const Color(0xFF4d2963),
-                    child: const Text(
-                      'ABOUT US',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
+                  HeaderWidget(
+                    onLogoTap: () => navigateToHome(context),
+                    onAboutTap: () {}, // No action needed since we're already on About Us
                   ),
                   Expanded(
                     child: Container(
@@ -37,12 +32,7 @@ class AboutUsPage extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               navigateToHome(context);
-                            },
-                            child: Image.asset(
-                              'assets/images/your_logo.png', // Replace with your logo asset
-                              height: 18,
-                              fit: BoxFit.cover,
-                            ),
+                            }, 
                           ),
                           const Spacer(),
                           // You can add icons here if you want
@@ -62,7 +52,7 @@ class AboutUsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Text(
-                    'Union Shop - University of Portsmouth',
+                    'About Us',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -71,12 +61,18 @@ class AboutUsPage extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   Text(
-                    'We are the official University of Portsmouth Union Shop, providing students with quality merchandise and essentials. Our mission is to support student life and promote university spirit through our products.',
+                    'Welcome to the Union Shop!\n'
+                    'We\'re dedicated to giving you the very best University branded products, with a range of clothing and merchandise available to shop all year round! We even offer an exclusive personalisation service!\n\n'
+                    'All online purchases are available for delivery or instore collection!\n\n'
+                    'We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don\'t hesitate to contact us at hello@upsu.net.\n\n'
+                    'Happy shopping!\n\n'
+                    'The Union Shop & Reception Team',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,
                       height: 1.5,
                     ),
+                    textAlign: TextAlign.left,
                   ),
                   SizedBox(height: 24),
                   Text(
