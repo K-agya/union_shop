@@ -98,7 +98,9 @@ class HeaderWidget extends StatelessWidget {
                             minWidth: 32,
                             minHeight: 32,
                           ),
-                          onPressed: () {}, // Placeholder for profile
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/login');
+                          },
                         ),
                         IconButton(
                           icon: const Icon(
