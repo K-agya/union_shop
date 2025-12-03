@@ -162,7 +162,7 @@ class HeaderWidget extends StatelessWidget {
                               } else if (value == 'about') {
                                 onAboutTap();
                               } else if (value == 'products') {
-                                Navigator.pushNamed(context, '/products');
+                                onProductTap();
                               }
                             },
                             itemBuilder: (context) => [
