@@ -44,6 +44,10 @@ class HomeScreen extends StatelessWidget {
   void placeholderCallbackForButtons() {
   }
 
+  void navigateToLogin(BuildContext context) {
+    Navigator.pushNamed(context, '/login');
+  }
+
   void navigateToAbout(BuildContext context) {
     Navigator.pushNamed(context, '/about');
   }
