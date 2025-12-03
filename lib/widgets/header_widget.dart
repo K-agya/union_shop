@@ -61,7 +61,7 @@ class HeaderWidget extends StatelessWidget {
                   // Navigation Links (Desktop View)
                   if (screenWidth > 600) ...[
                     TextButton(
-                      onPressed: () {}, // Placeholder for Home
+                      onPressed: onLogoTap, // Placeholder for Home
                       child: const Text(
                         'Home',
                         style: TextStyle(
