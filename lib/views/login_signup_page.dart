@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/widgets/header_widget.dart'; // Import HeaderWidget
 import 'package:union_shop/widgets/footer_widget.dart'; // Import FooterWidget
 
 class LoginSignupPage extends StatelessWidget {
   const LoginSignupPage({super.key});
 
+  void navigateToHome(BuildContext context) {
+    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login / Signup'),
-        backgroundColor: const Color(0xFF4d2963),
-      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Add HeaderWidget
+            HeaderWidget(
+              onLogoTap: () => navigateToHome(context),
+              onAboutTap: () {}, // No action needed for About Us here
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
