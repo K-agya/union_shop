@@ -48,6 +48,11 @@ class HomeScreen extends StatelessWidget {
     Navigator.pushNamed(context, '/about');
   }
 
+  void navigateToProduct(BuildContext context) {
+    print('Navigating to Product Page');
+    Navigator.pushNamed(context, '/product');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +62,7 @@ class HomeScreen extends StatelessWidget {
             HeaderWidget(
               onLogoTap: () => navigateToHome(context),
               onAboutTap: () => navigateToAbout(context),
+              onProductTap: () => navigateToProduct(context),
             ),
 
             // Hero Section
