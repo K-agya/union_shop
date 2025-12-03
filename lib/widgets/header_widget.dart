@@ -146,20 +146,37 @@ class HeaderWidget extends StatelessWidget {
                           ),
                           onPressed: () {}, // Placeholder for cart
                         ),
-                        // Hamburger Menu (Mobile View)
+                        // Popup Menu (Mobile View)
                         if (screenWidth <= 600)
-                          IconButton(
+                          PopupMenuButton<String>(
                             icon: const Icon(
                               Icons.menu,
                               size: 18,
                               color: Colors.grey,
                             ),
-                            padding: const EdgeInsets.all(8),
-                            constraints: const BoxConstraints(
-                              minWidth: 32,
-                              minHeight: 32,
-                            ),
-                            onPressed: () {}, // Placeholder for menu
+                            onSelected: (value) {
+                              if (value == 'home') {
+                                Navigator.pushNamed(context, '/');
+                              } else if (value == 'about') {
+                                onAboutTap();
+                              } else if (value == 'products') {
+                                Navigator.pushNamed(context, '/products');
+                              }
+                            },
+                            itemBuilder: (context) => [
+                              const PopupMenuItem(
+                                value: 'home',
+                                child: Text('Home'),
+                              ),
+                              const PopupMenuItem(
+                                value: 'about',
+                                child: Text('About Us'),
+                              ),
+                              const PopupMenuItem(
+                                value: 'products',
+                                child: Text('Products'),
+                              ),
+                            ],
                           ),
                       ],
                     ),
