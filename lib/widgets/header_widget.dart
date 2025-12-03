@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class HeaderWidget extends StatelessWidget {
   final VoidCallback onLogoTap;
   final VoidCallback onAboutTap;
+  final VoidCallback onProductTap;
 
   const HeaderWidget({
     super.key,
     required this.onLogoTap,
     required this.onAboutTap,
+    required this.onProductTap,
   });
 
   @override
@@ -85,7 +87,7 @@ class HeaderWidget extends StatelessWidget {
                     ),
                     const SizedBox(width: 16),
                     TextButton(
-                      onPressed: () {}, // Placeholder for Products
+                      onPressed: onProductTap, // Placeholder for Products
                       child: const Text(
                         'Products',
                         style: TextStyle(
