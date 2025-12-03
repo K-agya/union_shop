@@ -24,7 +24,9 @@ class AboutUsPage extends StatelessWidget {
                   HeaderWidget(
                     onLogoTap: () => navigateToHome(context),
                     onAboutTap: () {},
-                    onProductTap: () {}, // No action needed since we're already on About Us
+                    onProductTap: () {
+                      Navigator.pushNamed(context, '/product');
+                    }, // No action needed since we're already on About Us
                   ),
                   Expanded(
                     child: Container(

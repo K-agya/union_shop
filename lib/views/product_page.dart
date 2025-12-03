@@ -22,8 +22,10 @@ class ProductPage extends StatelessWidget {
             // Header
             HeaderWidget(
               onLogoTap: () => navigateToHome(context),
-              onAboutTap: placeholderCallbackForButtons,
-              onProductTap: placeholderCallbackForButtons,
+              onAboutTap: () {
+                Navigator.pushNamed(context, '/about');
+              },
+              onProductTap: () {}, // No action needed since we're already on Products),
             ),
 
             // Product details
