@@ -4,12 +4,14 @@ class HeaderWidget extends StatelessWidget {
   final VoidCallback onLogoTap;
   final VoidCallback onAboutTap;
   final VoidCallback onProductTap;
+  final VoidCallback onLoginTap;
 
   const HeaderWidget({
     super.key,
     required this.onLogoTap,
     required this.onAboutTap,
     required this.onProductTap,
+    required this.onLoginTap,
   });
 
   @override
@@ -132,7 +134,7 @@ class HeaderWidget extends StatelessWidget {
                             minHeight: 32,
                           ),
                           onPressed: () {
-                            Navigator.pushNamed(context, '/login');
+                            onLoginTap();
                           },
                         ),
                         IconButton(
@@ -158,7 +160,7 @@ class HeaderWidget extends StatelessWidget {
                             ),
                             onSelected: (value) {
                               if (value == 'home') {
-                                Navigator.pushNamed(context, '/');
+                                onLogoTap();
                               } else if (value == 'about') {
                                 onAboutTap();
                               } else if (value == 'products') {
