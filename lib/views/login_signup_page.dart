@@ -19,7 +19,8 @@ class LoginSignupPage extends StatelessWidget {
             // Add HeaderWidget
             HeaderWidget(
               onLogoTap: () => navigateToHome(context),
-              onAboutTap: () {}, // No action needed for About Us here
+              onAboutTap: () {}, 
+              onProductTap: () {}, // No action needed for Products here
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
