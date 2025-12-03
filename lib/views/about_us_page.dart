@@ -5,10 +5,6 @@ import 'package:union_shop/widgets/footer_widget.dart';
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({super.key});
 
-  void navigateToHome(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,36 +12,11 @@ class AboutUsPage extends StatelessWidget {
         child: Column(
           children: [
             // Header
-            Container(
-              height: 100,
-              color: Colors.white,
-              child: Column(
-                children: [
-                  HeaderWidget(
-                    onLogoTap: () => Navigator.pushNamed(context, '/'),
-                    onAboutTap: () => Navigator.pushNamed(context, '/about'),
-                    onProductTap: () =>
-                        Navigator.pushNamed(context, '/product'),
-                    onLoginTap: () => Navigator.pushNamed(context, '/login'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Row(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              navigateToHome(context);
-                            },
-                          ),
-                          const Spacer(),
-                          // You can add icons here if you want
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            HeaderWidget(
+              onLogoTap: () => Navigator.pushNamed(context, '/'),
+              onAboutTap: () => Navigator.pushNamed(context, '/about'),
+              onProductTap: () => Navigator.pushNamed(context, '/product'),
+              onLoginTap: () => Navigator.pushNamed(context, '/login'),
             ),
 
             // About Us details
@@ -81,6 +52,7 @@ class AboutUsPage extends StatelessWidget {
                 ],
               ),
             ),
+
             // Footer
             const FooterWidget(),
           ],

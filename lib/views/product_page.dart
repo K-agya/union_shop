@@ -5,10 +5,6 @@ import 'package:union_shop/widgets/footer_widget.dart';
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
 
-  void navigateToHome(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
-
   void placeholderCallbackForButtons() {
     // This is the event handler for buttons that don't work yet
   }

@@ -5,9 +5,7 @@ import 'package:union_shop/widgets/footer_widget.dart'; // Import FooterWidget
 class LoginSignupPage extends StatelessWidget {
   const LoginSignupPage({super.key});
 
-  void navigateToHome(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
+
 
   @override
   Widget build(BuildContext context) {
