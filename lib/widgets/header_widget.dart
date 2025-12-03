@@ -12,6 +12,8 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
       height: 100,
       color: Colors.white,
@@ -55,20 +57,49 @@ class HeaderWidget extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 16),
-                  // About Us Button
-                  TextButton(
-                    onPressed: onAboutTap,
-                    child: const Text(
-                      'About Us',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 103, 103, 103),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
+
+                  // Navigation Links (Desktop View)
+                  if (screenWidth > 600) ...[
+                    TextButton(
+                      onPressed: () {}, // Placeholder for Home
+                      child: const Text(
+                        'Home',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 103, 103, 103),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
                       ),
                     ),
-                  ),
+                    const SizedBox(width: 16),
+                    TextButton(
+                      onPressed: onAboutTap, // Navigate to About Us
+                      child: const Text(
+                        'About Us',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 103, 103, 103),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    TextButton(
+                      onPressed: () {}, // Placeholder for Products
+                      child: const Text(
+                        'Products',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 103, 103, 103),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ],
+
                   const Spacer(),
-                  // Action Buttons
+
+                  // Action Buttons (Search, User, Cart, Menu)
                   ConstrainedBox(
                     constraints: const BoxConstraints(maxWidth: 600),
                     child: Row(
@@ -115,19 +146,21 @@ class HeaderWidget extends StatelessWidget {
                           ),
                           onPressed: () {}, // Placeholder for cart
                         ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.menu,
-                            size: 18,
-                            color: Colors.grey,
+                        // Hamburger Menu (Mobile View)
+                        if (screenWidth <= 600)
+                          IconButton(
+                            icon: const Icon(
+                              Icons.menu,
+                              size: 18,
+                              color: Colors.grey,
+                            ),
+                            padding: const EdgeInsets.all(8),
+                            constraints: const BoxConstraints(
+                              minWidth: 32,
+                              minHeight: 32,
+                            ),
+                            onPressed: () {}, // Placeholder for menu
                           ),
-                          padding: const EdgeInsets.all(8),
-                          constraints: const BoxConstraints(
-                            minWidth: 32,
-                            minHeight: 32,
-                          ),
-                          onPressed: () {}, // Placeholder for menu
-                        ),
                       ],
                     ),
                   ),
