@@ -21,11 +21,10 @@ class ProductPage extends StatelessWidget {
           children: [
             // Header
             HeaderWidget(
-              onLogoTap: () => navigateToHome(context),
-              onAboutTap: () {
-                Navigator.pushNamed(context, '/about');
-              },
-              onProductTap: () {}, // No action needed since we're already on Products),
+              onLogoTap: () => Navigator.pushNamed(context, '/'),
+              onAboutTap: () => Navigator.pushNamed(context, '/about'),
+              onProductTap: () => Navigator.pushNamed(context, '/product'),
+              onLoginTap: () => Navigator.pushNamed(context, '/login'),
             ),
 
             // Product details

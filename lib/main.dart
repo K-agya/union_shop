@@ -3,7 +3,7 @@ import 'package:union_shop/views/product_page.dart';
 import 'package:union_shop/views/about_us_page.dart';
 import 'package:union_shop/widgets/header_widget.dart';
 import 'package:union_shop/widgets/footer_widget.dart';
-import 'package:union_shop/views/login_signup_page.dart'; 
+import 'package:union_shop/views/login_signup_page.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -41,8 +41,7 @@ class HomeScreen extends StatelessWidget {
     Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
   }
 
-  void placeholderCallbackForButtons() {
-  }
+  void placeholderCallbackForButtons() {}
 
   void navigateToLogin(BuildContext context) {
     Navigator.pushNamed(context, '/login');
@@ -64,9 +63,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             HeaderWidget(
-              onLogoTap: () => navigateToHome(context),
-              onAboutTap: () => navigateToAbout(context),
-              onProductTap: () => navigateToProduct(context),
+              onLogoTap: () => Navigator.pushNamed(context, '/'),
+              onAboutTap: () => Navigator.pushNamed(context, '/about'),
+              onProductTap: () => Navigator.pushNamed(context, '/product'),
+              onLoginTap: () => Navigator.pushNamed(context, '/login'),
             ),
 
             // Hero Section
@@ -169,26 +169,22 @@ class HomeScreen extends StatelessWidget {
                         ProductCard(
                           title: 'UOP Mug',
                           price: '£10.00',
-                          imageUrl:
-                              'assets/images/Mug.png',
+                          imageUrl: 'assets/images/Mug.png',
                         ),
                         ProductCard(
                           title: 'UOP Bottle',
                           price: '£15.00',
-                          imageUrl:
-                              'assets/images/Bottle.png',
+                          imageUrl: 'assets/images/Bottle.png',
                         ),
                         ProductCard(
                           title: 'UOP Hoodie',
                           price: '£20.00',
-                          imageUrl:
-                              'assets/images/Hoodie.png',
+                          imageUrl: 'assets/images/Hoodie.png',
                         ),
                         ProductCard(
                           title: 'UOP Tote Bag',
                           price: '£25.00',
-                          imageUrl:
-                              'assets/images/Tote.png',
+                          imageUrl: 'assets/images/Tote.png',
                         ),
                       ],
                     ),

@@ -22,11 +22,11 @@ class AboutUsPage extends StatelessWidget {
               child: Column(
                 children: [
                   HeaderWidget(
-                    onLogoTap: () => navigateToHome(context),
-                    onAboutTap: () {},
-                    onProductTap: () {
-                      Navigator.pushNamed(context, '/product');
-                    }, // No action needed since we're already on About Us
+                    onLogoTap: () => Navigator.pushNamed(context, '/'),
+                    onAboutTap: () => Navigator.pushNamed(context, '/about'),
+                    onProductTap: () =>
+                        Navigator.pushNamed(context, '/product'),
+                    onLoginTap: () => Navigator.pushNamed(context, '/login'),
                   ),
                   Expanded(
                     child: Container(
@@ -36,7 +36,7 @@ class AboutUsPage extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               navigateToHome(context);
-                            }, 
+                            },
                           ),
                           const Spacer(),
                           // You can add icons here if you want
