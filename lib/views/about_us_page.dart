@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:union_shop/widgets/header_widget.dart';
 import 'package:union_shop/widgets/footer_widget.dart';
 
+
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({super.key});
 
@@ -17,6 +18,7 @@ class AboutUsPage extends StatelessWidget {
               onAboutTap: () => Navigator.pushNamed(context, '/about'),
               onProductTap: () => Navigator.pushNamed(context, '/product'),
               onLoginTap: () => Navigator.pushNamed(context, '/login'),
+              onCollectionsTap: () => Navigator.pushNamed(context, '/collections'),
             ),
 
             // About Us details

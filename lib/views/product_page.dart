@@ -21,6 +21,7 @@ class ProductPage extends StatelessWidget {
               onAboutTap: () => Navigator.pushNamed(context, '/about'),
               onProductTap: () => Navigator.pushNamed(context, '/product'),
               onLoginTap: () => Navigator.pushNamed(context, '/login'),
+              onCollectionsTap: () => Navigator.pushNamed(context, '/collections')
             ),
 
             // Product details
