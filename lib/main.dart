@@ -4,6 +4,7 @@ import 'package:union_shop/views/about_us_page.dart';
 import 'package:union_shop/widgets/header_widget.dart';
 import 'package:union_shop/widgets/footer_widget.dart';
 import 'package:union_shop/views/login_signup_page.dart';
+import 'package:union_shop/views/collections_page.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -29,6 +30,7 @@ class UnionShopApp extends StatelessWidget {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutUsPage(),
         '/login': (context) => const LoginSignupPage(),
+        '/collections': (context) => const CollectionsPage(),
       },
     );
   }
@@ -37,24 +39,8 @@ class UnionShopApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  void navigateToHome(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
-
   void placeholderCallbackForButtons() {}
 
-  void navigateToLogin(BuildContext context) {
-    Navigator.pushNamed(context, '/login');
-  }
-
-  void navigateToAbout(BuildContext context) {
-    Navigator.pushNamed(context, '/about');
-  }
-
-  void navigateToProduct(BuildContext context) {
-    print('Navigating to Product Page');
-    Navigator.pushNamed(context, '/product');
-  }
 
   @override
   Widget build(BuildContext context) {
