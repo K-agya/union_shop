@@ -5,6 +5,7 @@ class HeaderWidget extends StatelessWidget {
   final VoidCallback onAboutTap;
   final VoidCallback onProductTap;
   final VoidCallback onLoginTap;
+  final VoidCallback onCollectionsTap; // Add onCollectionsTap
 
   const HeaderWidget({
     super.key,
@@ -12,6 +13,7 @@ class HeaderWidget extends StatelessWidget {
     required this.onAboutTap,
     required this.onProductTap,
     required this.onLoginTap,
+    required this.onCollectionsTap, // Add this to the constructor
   });
 
   @override
@@ -65,7 +67,7 @@ class HeaderWidget extends StatelessWidget {
                   // Navigation Links (Desktop View)
                   if (screenWidth > 600) ...[
                     TextButton(
-                      onPressed: onLogoTap, // Placeholder for Home
+                      onPressed: onLogoTap, // Navigate to Home
                       child: const Text(
                         'Home',
                         style: TextStyle(
@@ -89,7 +91,19 @@ class HeaderWidget extends StatelessWidget {
                     ),
                     const SizedBox(width: 16),
                     TextButton(
-                      onPressed: onProductTap, // Placeholder for Products
+                      onPressed: onCollectionsTap, // Navigate to Collections
+                      child: const Text(
+                        'Collections',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 103, 103, 103),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    TextButton(
+                      onPressed: onProductTap, // Navigate to Products
                       child: const Text(
                         'Products',
                         style: TextStyle(
@@ -133,9 +147,7 @@ class HeaderWidget extends StatelessWidget {
                             minWidth: 32,
                             minHeight: 32,
                           ),
-                          onPressed: () {
-                            onLoginTap();
-                          },
+                          onPressed: onLoginTap, // Navigate to Login
                         ),
                         IconButton(
                           icon: const Icon(
@@ -163,6 +175,8 @@ class HeaderWidget extends StatelessWidget {
                                 onLogoTap();
                               } else if (value == 'about') {
                                 onAboutTap();
+                              } else if (value == 'collections') {
+                                onCollectionsTap(); // Navigate to Collections
                               } else if (value == 'products') {
                                 onProductTap();
                               }
@@ -175,6 +189,10 @@ class HeaderWidget extends StatelessWidget {
                               const PopupMenuItem(
                                 value: 'about',
                                 child: Text('About Us'),
+                              ),
+                              const PopupMenuItem(
+                                value: 'collections',
+                                child: Text('Collections'),
                               ),
                               const PopupMenuItem(
                                 value: 'products',
